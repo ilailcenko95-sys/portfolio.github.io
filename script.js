@@ -1,7 +1,11 @@
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+if (menuToggle && navLinks) {
+  const toggleMenu = () => navLinks.classList.toggle('active');
+  menuToggle.addEventListener('click', toggleMenu);
+  menuToggle.addEventListener('touchend', toggleMenu);
+}
 
 // Sticky navbar background on scroll
 const navbar = document.getElementById('navbar');
