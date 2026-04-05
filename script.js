@@ -1,6 +1,20 @@
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+
+// Функция для закрытия меню и прокрутки к якорю
+function closeMenuAndScroll(selector) {
+  if (navLinks) {
+    navLinks.classList.remove('active');
+  }
+  const element = document.querySelector(selector);
+  if (element) {
+    setTimeout(() => {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+}
+
 if (menuToggle && navLinks) {
   const toggleMenu = (event) => {
     if (event) event.preventDefault();
