@@ -15,11 +15,15 @@
     <div class="nav-container">
       <div class="logo">Ilya.dev</div>
       <ul class="nav-links">
-        <li><a href="#hero">Главная</a></li>
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#projects">Проекты</a></li>
-        <li><a href="#contact">Контакты</a></li>
-        <li><a href="rickroll.html">Секрет</a></li>
+        <div class="lang-switch">
+  <button onclick="setLanguage('ru')">RU</button>
+  <button onclick="setLanguage('en')">EN</button>
+</div>
+        <li><a id="hero-link" href="#hero">Главная</a></li>
+        <li><a id="about-link" href="#about">Обо мне</a></li>
+        <li><a id="projects-link" href="#projects">Проекты</a></li>
+        <li><a id="contact-link" href="#contact">Контакты</a></li>
+        <li><a id="secret-link" href="rickroll.html">Секрет</a></li>
       </ul>
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
@@ -28,15 +32,21 @@
   <!-- Hero Section -->
   <section class="reveal" id="hero">
     <div class="hero-content">
-      <h1>
-        Привет, меня зовут Илья 👋<br>
-        <span id="typing"></span>
-      </h1>
-      <p class="subtitle">Мне 13 лет, я занимаюсь программированием уже 1.5 года</p>
-      <p class="skills">Работаю с: HTML, CSS, JavaScript, Figma и Python</p>
+      <h1 id="title">
+  Привет, меня зовут Илья 👋<br>
+  <span id="typing"></span>
+</h1>
+
+<p class="subtitle" id="subtitle">
+  Мне 13 лет, я занимаюсь программированием уже 1.5 года
+</p>
+
+<p class="skills" id="skills-text">
+  Работаю с: HTML, CSS, JavaScript, Figma и Python
+</p>
       <div class="buttons">
-        <a href="#projects" class="btn">Мои проекты</a>
-        <a href="#contact" class="btn btn-outline">Связаться</a>
+        <a href="#projects" class="btn" id="projects-btn">Мои проекты</a>
+<a href="#contact" class="btn btn-outline" id="contact-btn">Связаться</a>
       
       </div>
     </div>
@@ -45,13 +55,14 @@
 <!-- About Section -->
 <section class="reveal" id="about">
   <div class="container">
-    <h2>Обо мне</h2>
-    <p class="about-text">
-      Меня зовут Илья, мне 13 лет. Я занимаюсь программированием уже 1.5 года.
-      Люблю создавать современные и удобные сайты. Постоянно развиваюсь и изучаю новые технологии.
-    </p>
+    <h2 id="about-title">Обо мне</h2>
 
-    <h2>Навыки</h2>
+<p class="about-text" id="about-text">
+  Меня зовут Илья, мне 13 лет. Я занимаюсь программированием уже 1.5 года.
+  Люблю создавать современные и удобные сайты. Постоянно развиваюсь и изучаю новые технологии.
+</p>
+
+    <h2 id="Skillers">Навыки</h2>
     <div class="skills">
 
       <div class="skill">
@@ -101,9 +112,9 @@
     <div class="card-img icon">
       <i class="fas fa-globe"></i>
     </div>
-    <div class="card-content">
+    <div  class="card-content">
       <h3>Landing Page</h3>
-      <p>Современный адаптивный лендинг с анимациями</p>
+      <p id="Cards_heehe">Современный адаптивный лендинг с анимациями</p>
       <div class="tech">HTML • CSS • JS</div>
     </div>
   </a>
@@ -115,7 +126,7 @@
     </div>
     <div class="card-content">
       <h3>Portfolio Website</h3>
-      <p>Личный сайт с анимациями и адаптивом</p>
+      <p id="Cards_heehe1">Личный сайт с анимациями и адаптивом</p>
       <div class="tech">HTML • CSS • JS</div>
     </div>
   </a>
@@ -127,7 +138,7 @@
     </div>
     <div class="card-content">
       <h3>Todo App</h3>
-      <p>Приложение для задач</p>
+      <p id="Cards_heehe2">Приложение для задач</p>
       <div class="tech">JavaScript</div>
     </div>
   </a>
@@ -139,7 +150,7 @@
     </div>
     <div class="card-content">
       <h3>Figma</h3>
-      <p>Дизайн интерфейсов</p>
+      <p id="Cards_heehe3">Дизайн интерфейсов</p>
       <div class="tech">Figma</div>
     </div>
   </a>
@@ -151,7 +162,7 @@
     </div>
     <div class="card-content">
       <h3>Python</h3>
-      <p>Язык программирования</p>
+      <p id="Cards_heehe4">Язык программирования</p>
       <div class="tech">Python</div>
     </div>
   </a>
@@ -160,21 +171,21 @@
   <!-- Contact Section --> 
 <section class="reveal" id="contact">
   <div class="container">
-    <h2>Контакты</h2>
-    <p>Ты можешь связаться со мной по email: 
+    <h2 id="Contacts">Контакты</h2>
+    <p id="join_me">Ты можешь связаться со мной по email: 
       <a href="mailto:ilailcenko95@gmail.com">ilailcenko95@gmail.com</a>
     </p>
 
     <!-- ФОРМА -->
     <form class="contact-form" action="https://formspree.io/f/xreooepl" method="POST">
   
-  <input type="text" name="name" placeholder="Твоё имя" required>
+  <input type="text" name="name" placeholder="Your name" required>
   
-  <input type="email" name="email" placeholder="Твой email" required>
+  <input type="email" name="email" placeholder="Your email" required>
   
-  <textarea name="message" placeholder="Твоё сообщение" rows="5" required></textarea>
+  <textarea name="message" placeholder="message" rows="5" required></textarea>
   
-  <button type="submit">Отправить</button>
+  <button id="Submit" type="submit">Отправить</button>
 
 </form>
 

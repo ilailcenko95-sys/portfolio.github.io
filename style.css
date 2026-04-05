@@ -29,7 +29,12 @@ h1 { font-size: 40px; margin-bottom: 20px; }
   border-radius: 8px;
   transition: 0.3s;
 }
-.btn:hover { background: #2563eb; transform: scale(1.05); }
+
+.btn:hover {
+  cursor: url('Cursor.cur') 16 16, pointer;
+  background: #2563eb;
+  transform: scale(1.05);
+}
 .btn-outline { background: transparent; border: 1px solid #3b82f6; }
 .btn-outline:hover { background: #3b82f6; }
 
@@ -336,4 +341,23 @@ html { scroll-behavior: smooth; }
 
 .card:hover {
   transform: translateY(-5px);
+}
+.lang-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-switch button:hover {
+  background: #38bdf8;
+  color: black;
 }
