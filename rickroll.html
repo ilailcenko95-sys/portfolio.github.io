@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>😈</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    iframe {
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      border: none;
+    }
+
+    .escape {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .fake-btn {
+      position: absolute;
+      padding: 10px;
+      background: yellow;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Ты попался 😈</h1>
+
+<button class="escape" onclick="window.location.href='index.html'">
+  Выйти
+</button>
+
+<script>
+  // много рикроллов
+  for (let i = 0; i < 10; i++) {
+  let iframe = document.createElement("iframe");
+  iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0";
+  iframe.allow = "autoplay";
+  iframe.style.top = Math.random() * (window.innerHeight - 200) + "px";
+  iframe.style.left = Math.random() * (window.innerWidth - 300) + "px";
+  document.body.appendChild(iframe);
+}
+
+  // убегающие кнопки
+  setInterval(() => {
+    let btn = document.createElement("div");
+    btn.className = "fake-btn";
+    btn.innerText = "Нажми меня 😏";
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+
+    btn.onmouseover = () => {
+      btn.style.top = Math.random() * window.innerHeight + "px";
+      btn.style.left = Math.random() * window.innerWidth + "px";
+    };
+
+    document.body.appendChild(btn);
+  }, 1000);
+</script>
+
+</body>
+</html>
