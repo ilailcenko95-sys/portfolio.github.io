@@ -64,7 +64,10 @@ const translations = {
     aboutLink: "Обо мне",
     projectsLink: "Проекты",
     contactLink: "Контакты",
-    secretLink: "Секрет"
+    secretLink: "Секрет",
+    yourname:"твое имя",
+    email: "твой email",
+    message:"твое сообщение"
   },
   en: {
     title: "Hi, my name is Ilya 👋",
@@ -87,11 +90,38 @@ const translations = {
     aboutLink: "About me",
     projectsLink: "Projects",
     contactLink: "Contacts",
-    secretLink: "Secret"
+    secretLink: "Secret",
+    yourname:"your name",
+    email: "your email",
+    message:"your message"
 
-
-
-  }
+  },
+    fr: {
+    title: "Bonjour, je m'appelle Ilya 👋",
+    subtitle: "J'ai 13 ans et je programme depuis 1.5 ans",
+    skills: "Je travaille avec: HTML, CSS, JavaScript, Figma et Python",
+    aboutTitle: "À propos de moi",
+    aboutText: "Je m'appelle Ilya, j'ai 13 ans. Je programme depuis 1.5 ans. J'aime créer des sites web modernes et conviviaux. Je développe constamment mes compétences et j'étudie les nouvelles technologies.",
+    projectsBtn: "Mes projets",
+    contactBtn: "Contactez-moi",
+    Skillers: "Compétences",
+    Cards_heehe: "Page de destination réactive moderne avec animations",
+    Cards_heehe1: "Site personnel avec animations et réactivité",
+    Cards_heehe2: "Application pour tâches",
+    Cards_heehe3: "Conception d'interfaces",
+    Cards_heehe4: "Langage de programmation",
+    join_me: "Vous pouvez me contacter par email: ",
+    Contacts: "Contacts",
+    Submit: "Envoyer",
+    heroLink: "Accueil",
+    aboutLink: "À propos de moi",
+    projectsLink: "Projets",
+    contactLink: "Contact",
+    secretLink: "Secret",
+    yourname:"ton nom",
+    email :"ton email",
+    message:"ton message"
+  },
 };
 
 function setLanguage(lang) {
@@ -119,9 +149,11 @@ function setLanguage(lang) {
   document.getElementById("projects-link").textContent = translations[lang].projectsLink;
   document.getElementById("contact-link").textContent = translations[lang].contactLink;
   document.getElementById("secret-link").textContent = translations[lang].secretLink;
+  document.getElementById("yourname").placeholder = translations[lang].yourname;
+  document.getElementById("email").placeholder = translations[lang].email;
+  document.getElementById("message").placeholder = translations[lang].message;
 
 }
-
 // загрузка языка при старте
 window.addEventListener("load", () => {
   const lang = localStorage.getItem("lang") || "ru";
