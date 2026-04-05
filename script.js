@@ -20,6 +20,14 @@ if (menuToggle && navLinks) {
     }
     toggleMenu(event);
   });
+
+  // Закрыть меню при клике на ссылку
+  const navItems = navLinks.querySelectorAll('a');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
 }
 
 // Sticky navbar background on scroll
