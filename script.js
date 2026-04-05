@@ -2,9 +2,24 @@
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (menuToggle && navLinks) {
-  const toggleMenu = () => navLinks.classList.toggle('active');
-  menuToggle.addEventListener('click', toggleMenu);
-  menuToggle.addEventListener('touchend', toggleMenu);
+  const toggleMenu = (event) => {
+    if (event) event.preventDefault();
+    navLinks.classList.toggle('active');
+  };
+
+  let touchUsed = false;
+  menuToggle.addEventListener('touchend', (event) => {
+    touchUsed = true;
+    toggleMenu(event);
+  });
+
+  menuToggle.addEventListener('click', (event) => {
+    if (touchUsed) {
+      touchUsed = false;
+      return;
+    }
+    toggleMenu(event);
+  });
 }
 
 // Sticky navbar background on scroll
