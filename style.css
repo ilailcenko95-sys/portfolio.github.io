@@ -26,12 +26,15 @@ h1 { font-size: 40px; margin-bottom: 20px; }
   padding: 10px 20px;
   background: #3b82f6;
   color: white;
+  border: none;
   border-radius: 8px;
   transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
 .btn:hover {
-  cursor: url('Cursor.cur') 16 16, pointer;
   background: #2563eb;
   transform: scale(1.05);
 }
@@ -341,7 +344,13 @@ html { scroll-behavior: smooth; }
 
   .btn {
     width: 100%;
-    max-width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .projects-grid {
