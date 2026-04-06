@@ -1,3 +1,4 @@
+
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -108,7 +109,9 @@ const translations = {
     secretLink: "Секрет",
     yourname:"твое имя",
     email: "твой email",
-    message:"твое сообщение"
+    message:"твое сообщение",
+    ueheheeh: "Ты попался 😈",
+    Escape: "Сбежать",
   },
   en: {
     title: "Hi, my name is Ilya 👋",
@@ -134,8 +137,9 @@ const translations = {
     secretLink: "Secret",
     yourname:"your name",
     email: "your email",
-    message:"your message"
-
+    message:"your message",
+    ueheheeh: "You got me 😈",
+    Escape: "Escape",
   },
     fr: {
     title: "Bonjour, je m'appelle Ilya 👋",
@@ -161,7 +165,9 @@ const translations = {
     secretLink: "Secret",
     yourname:"ton nom",
     email :"ton email",
-    message:"ton message"
+    message:"ton message",
+    ueheheeh: "Tu m'as eu 😈",
+    Escape: "Échapper",
   },
 };
 
@@ -193,7 +199,8 @@ function setLanguage(lang) {
   document.getElementById("yourname").placeholder = translations[lang].yourname;
   document.getElementById("email").placeholder = translations[lang].email;
   document.getElementById("message").placeholder = translations[lang].message;
-
+  document.getElementById("ueheheeh").textContent = translations[lang].ueheheeh;
+  document.getElementById("Escape").textContent = translations[lang].Escape;
 }
 // загрузка языка при старте
 window.addEventListener("load", () => {

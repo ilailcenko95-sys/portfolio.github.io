@@ -349,6 +349,7 @@ html { scroll-behavior: smooth; }
     font-size: 16px;
     border: none;
     cursor: pointer;
+    appearance: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
   }
